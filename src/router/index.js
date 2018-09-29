@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import layout from "@/views/layout/layout";
 import headerImg from "@/views/headerImg/index";
+import writeNote from "@/views/writeNote/index";
 Vue.use(Router)
 
 export default new Router({
@@ -18,6 +19,14 @@ export default new Router({
           component:headerImg,
           meta:{
             title:"头图"
+          }
+        },
+        {
+          path:"writeNote",
+          name:"writeNote",
+          component:writeNote,
+          meta:{
+            title:"写笔记"
           }
         }
       ]

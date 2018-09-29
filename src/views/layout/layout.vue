@@ -3,7 +3,7 @@
        <div class="header">
           <div>云笔记</div>
          
-          <button>写笔记</button>
+          <button @click="writeNote">写笔记</button>
           
       </div>
       <router-view></router-view>
@@ -12,7 +12,17 @@
 
 <script>
 export default {
-    name:"layout"
+    name:"layout",
+    data(){
+        return{
+
+        }
+    },
+    methods:{
+        writeNote(){
+            this.$router.push("/index/writeNote");
+        }
+    }
 };
 </script>
 
@@ -24,7 +34,7 @@ export default {
         height:50px;
         background:rgb(0,142,239);
         div{
-         margin-left:200px;
+         margin-left:170px;
          color:#fff;
          font-size:30px;
          line-height:50px;
@@ -35,7 +45,7 @@ export default {
         
          button{
             position:absolute;
-            right:200px;
+            right:170px;
             top:10px;
             bottom:10px;
            display:inline-block;
